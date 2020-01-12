@@ -1,4 +1,4 @@
-# SparkleBase Daemon
+# Sparkle – a SparkleBase Daemon
 
 **Sparkle** is the data collection daemon for [sparklebase.com](https://sparklebase.com).
 
@@ -44,12 +44,21 @@ $ sparkle --help
 usage: sparkle [<flags>] <token>
 
 Flags:
-  --help     Show context-sensitive help (also try --help-long and --help-man).
-  --target="https://sparklebase.com/api/update-host"
-             Server URL
-  --version  Show application version.
+      --help     Show context-sensitive help (also try --help-long and --help-man).
+      --target="https://sparklebase.com/api/update-host"
+                 Server URL
+  -v, --verbose  Sets the log level to DEBUG
+      --version  Show application version.
 
 Args:
   <token>  Host specific update token
+
 ```
 
+## Build
+
+This will compile **sparkle** for `linux`, `darwin` and `freebsd` platforms, put the executables to `dist`. If `upx` is available it will be used to compress the executables.
+
+```
+$ sh build.sh
+```
